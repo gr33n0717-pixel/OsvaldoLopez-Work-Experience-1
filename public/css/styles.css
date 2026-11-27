@@ -21,7 +21,12 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 1.6;
@@ -159,7 +164,13 @@ img {
   width: 34px;
   height: 34px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange) 50%, var(--ink) 50%, var(--ink) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange) 50%,
+    var(--ink) 50%,
+    var(--ink) 100%
+  );
 }
 
 .nav-links {
@@ -178,7 +189,7 @@ img {
 }
 
 .nav-links a:hover,
-.nav-links a[aria-current='page'] {
+.nav-links a[aria-current="page"] {
   color: var(--orange-dark);
 }
 
@@ -193,7 +204,13 @@ img {
 }
 
 .site-header--home .logo-mark {
-  background: linear-gradient(135deg, var(--orange) 0%, var(--orange) 50%, var(--white) 50%, var(--white) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--orange) 0%,
+    var(--orange) 50%,
+    var(--white) 50%,
+    var(--white) 100%
+  );
 }
 
 .site-header--home .container {
@@ -339,7 +356,7 @@ img {
 }
 
 .check-list li::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 6px;
@@ -458,7 +475,7 @@ img {
 }
 
 .icon-dot::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 13px;
   border-radius: 50%;
@@ -746,6 +763,79 @@ img {
   padding-top: 24px;
 }
 
+@media (max-width: 1200px) {
+  .hero-media {
+    flex-shrink: 1;
+  }
+}
+
+@media (max-width: 980px) {
+  .site-header--home .container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .site-header--home .nav-links li {
+    font-size: 16px;
+    display: flex;
+    flex-shrink: 1;
+  }
+
+  .site-header--home .nav-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .site-header--home .nav-links a {
+    display: inline-block;
+    padding: 0;
+  }
+
+  .site-header--home .nav-links li:nth-child(7) .btn {
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image {
+    aspect-ratio: 6/3;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-media {
+    width: 100%;
+  }
+
+  .hero-media,
+  .hero-text .lead {
+    max-width: 100%;
+  }
+
+  .playbook-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 16px;
+  }
+
+  .playbook-grid > :nth-child(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+
 @media (max-width: 768px) {
   h1 {
     font-size: 40px;
@@ -781,6 +871,42 @@ img {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
+  .site-header--home .container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .site-header--home .nav-links li {
+    font-size: 16px;
+    display: flex;
+    flex-shrink: 1;
+  }
+
+  .site-header--home .nav-links li:nth-child(7) .btn {
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image {
+    aspect-ratio: 6/3;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .playbook-grid {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -798,5 +924,49 @@ img {
 
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .site-header--home .container {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .site-header--home .nav-links li {
+    font-size: 16px;
+    display: flex;
+    flex-shrink: 1;
+  }
+
+  .site-header--home .nav-links {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+  }
+
+  .site-header--home .nav-links li:nth-child(7) .btn {
+    text-align: center;
+    margin: 0;
+    max-width: 100%;
+  }
+
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-image {
+    aspect-ratio: 6/3;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .hero-media {
+    width: 100%;
   }
 }
